@@ -1,0 +1,95 @@
+/*Default Device*/
+/*Base*/
+.montserrat{font-family: montserrat;}
+
+.f-b{font-weight: bold;}
+.f-l{font-weight: lighter;}
+
+.f-white{color: #FFF;}
+.f-black{color: #232323;}
+
+.b-white{background-color: #FFF;}
+.b-black{background-color: #232323;}
+
+.none{display: none !important;}
+
+
+/*Component*/
+.show{
+	display: block;
+	animation: Show .2s ease-in;
+}
+.hide{
+	display: none;
+	animation: Hide .2s ease-out;
+}
+.circle{
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 20px;
+	height: 20px;
+	border: 3px solid #FFF;
+	border-radius: 50%;
+	z-index: 4;
+}
+input[type="checkbox"]:checked ~ .circle{
+	background-color: #72ABF8;
+	border: 3px solid #72ABF8;
+}
+
+/*Layout*/
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex-item{
+	flex: 0 0 33.33%;
+}
+
+
+/*Tablet*/
+@media screen and (min-width: 426px) and (max-width: 768px){
+	/*Base*/
+
+
+	/*Component*/
+
+
+	/*Layout*/
+}
+
+
+/*Mobile*/
+@media screen and (min-width: 0px) and (max-width: 425px){
+	/*Base*/
+
+
+	/*Component*/
+
+
+	/*Layout*/
+	.flex-item{
+		flex: 0 0 100%;
+	}
+}
+
+/*Keyframes*/
+@keyframes Show{
+	from{
+		opacity: 0
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes Hide{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}
